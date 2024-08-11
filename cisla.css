@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Poppins&display=swap");
 
 :root {
   --border-color: #e3e5e4;
@@ -11,13 +11,43 @@
 }
 
 h1 {
-  color: white;
+  font-family: "Merienda", cursive;
+  margin-top: 3rem;
+  color: black;
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  transition: 1s;
+  background-size: 200% auto;
+  color: rgb(4, 57, 61);
+  border: none;
+  border-radius: 10px;
+}
+
+nav button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color:#91DDCF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
-  background-color: #00dbde;
-  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  background: hsla(211, 66%, 87%, 1);
 
+background: linear-gradient(90deg, hsla(211, 66%, 87%, 1) 0%, hsla(348, 67%, 88%, 1) 50%, hsla(272, 26%, 72%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(211, 66%, 87%, 1) 0%, hsla(348, 67%, 88%, 1) 50%, hsla(272, 26%, 72%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(211, 66%, 87%, 1) 0%, hsla(348, 67%, 88%, 1) 50%, hsla(272, 26%, 72%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C9DEF4", endColorstr="#F5CCD4", GradientType=1 );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,33 +58,37 @@ body {
 }
 
 .draggable-list {
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  padding: 2rem 5rem;
+  font-size: large;
+  color: black;
+  padding: 1rem 4rem;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .draggable-list li {
-  background-color: rgb(16, 128, 136);
+  background-color: #CAF4FF;
   display: flex;
-  flex: 1;
-
+  
+  font-family: "Merienda", cursive;
   margin: 0.5rem;
-
-  box-shadow: 5px 5px 10px 5px #0000009a;
+  padding: 0.1rem;
+  box-shadow: 1px 1px 2px 1px #000000;
   border-radius: 1rem;
+  text-align: center;
+  width: 220px;
 }
 
 .draggable-list .number {
-  background-color: var(--background-color);
   display: flex;
+  background-color: wheat;
+ 
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  height: 40px;
-  width: 40px;
+  font-size: 15px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
 }
 
@@ -62,9 +96,8 @@ body {
   background-color: #eaeaea;
 }
 
-.draggable-list li {
+.draggable-list li:last-of-type {
   max-width: fit-content;
-  font-size: 24px;
 }
 
 .draggable-list .person-name {
@@ -72,11 +105,11 @@ body {
 }
 
 .draggable-list li.right {
-  background-color: #04802f;
+  background-color: #4ccd99b7;
 }
 
 .draggable-list li.wrong {
-  background-color: #fb5555;
+  background-color: #ff557fc2;
 }
 
 .draggable {
@@ -86,4 +119,27 @@ body {
   justify-content: space-between;
   padding: 15px;
   flex: 1;
+}
+
+.check-btn {
+  background-color: rgb(53, 181, 240);
+  border: none;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2rem;
+  position: fixed;
+  display: none;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus {
+  outline: none;
+}
+.check-btn:hover {
+  background-color: #4CCD99;
 }
