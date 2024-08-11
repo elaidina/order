@@ -13,16 +13,11 @@
 h1 {
   font-family: "Merienda", cursive;
   margin-top: 3rem;
-  color: white;
+  color: black;
 }
 
 nav button {
-  background-image: linear-gradient(
-    to right,
-    #ff6e7f 0%,
-    #bfe9ff 51%,
-    #ff6e7f 100%
-  );
+  
 }
 nav button {
   text-align: center;
@@ -36,7 +31,7 @@ nav button {
 
 nav button:hover {
   background-position: right center; /* change the direction of the change here */
-  color: rgb(4, 57, 61);
+  color:#91DDCF;
   text-decoration: none;
   cursor: pointer;
 }
@@ -46,9 +41,15 @@ a {
 }
 
 body {
-  background-color: #00dbde;
-  background-image: linear-gradient(90deg, #00de64 0%, #2600ff 100%);
+  background: hsla(332, 53%, 82%, 1);
 
+background: linear-gradient(90deg, hsla(332, 53%, 82%, 1) 0%, hsla(176, 57%, 89%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(332, 53%, 82%, 1) 0%, hsla(176, 57%, 89%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(332, 53%, 82%, 1) 0%, hsla(176, 57%, 89%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E9B7CE", endColorstr="#D3F3F1", GradientType=1 );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,8 +60,8 @@ body {
 }
 
 .draggable-list {
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
+  font-size: large;
+  color: black;
   padding: 5rem 10rem;
   list-style-type: none;
   display: flex;
@@ -68,19 +69,22 @@ body {
 }
 
 .draggable-list li {
-  background-color: rgb(16, 128, 136);
+  background-color: #CAF4FF;
   display: flex;
-  flex: 1;
+  
   font-family: "Merienda", cursive;
   margin: 0.5rem;
   padding: 0.5rem;
-  box-shadow: 5px 5px 20px 5px #000000;
+  box-shadow: 1px 1px 2px 1px #000000;
   border-radius: 1rem;
+  text-align: center;
+  width: 80px;
 }
 
 .draggable-list .number {
+  display: none;
   background-color: var(--background-color);
-  display: flex;
+ 
   align-items: center;
   justify-content: center;
   font-size: 28px;
@@ -102,11 +106,11 @@ body {
 }
 
 .draggable-list li.right {
-  background-color: #04802f;
+  background-color: #4CCD99;
 }
 
 .draggable-list li.wrong {
-  background-color: #fb5555;
+  background-color: #FF5580;
 }
 
 .draggable {
@@ -127,6 +131,7 @@ body {
   cursor: pointer;
   border-radius: 2rem;
   position: fixed;
+  display: none;
 }
 
 .check-btn:active {
@@ -137,5 +142,5 @@ body {
   outline: none;
 }
 .check-btn:hover {
-  background-color: rgb(18, 165, 43);
+  background-color: #4CCD99;
 }
